@@ -18,8 +18,8 @@
   </head>
   <body>
     <!--header-->
-    <header class="page-header">
-      <div class="container p-header-container">
+    <header class="header">
+      <div class="container header-container">
         <nav class="page-nav">
           <a class="logo link" href="./index.html">Web<span class="header-logo">Studio</span></a>
           <ul class="menu list">
@@ -28,6 +28,22 @@
             <li class="menu-item"><a class="menu-link link" href="">Contacts</a></li>
           </ul>
         </nav>
+        <button class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="32" height="22"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <use href="./images/icons.svg#icon-menu-mobile"></use>            
+            <path
+              fill-rule="evenodd"
+              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
         <address class="address">
           <ul class="contact list">
             <li><a class="contact-item link" href="mailto:info@devstudio.com">info@devstudio.com</a></li>
@@ -102,7 +118,7 @@
         </div>
       </section>
       <!--What are we doing-->
-      <section class="what-we-do">
+      <section class="what-we-are-doing">
         <div class="container">
           <h2 class="title">What are we doing</h2>
           <ul class="list gallery">
@@ -146,8 +162,8 @@
                 height="260"
               />
               <div class="team-member">
-                <h3 class="subtitle center-align">Mark Guerrero</h3>
-                <p class="text center-align">Product Designer</p>
+                <h3 class="team-member-subtitle">Mark Guerrero</h3>
+                <p class="team-member-position">Product Designer</p>
                 <ul class="list socials">
                   <li class="socials-item">
                     <a 
@@ -212,8 +228,8 @@
                 height="260"
               />
               <div class="team-member">
-                <h3 class="subtitle center-align">Tom Ford</h3>
-                <p class="text center-align">Frontend Developer</p>
+                <h3 class="team-member-subtitle">Tom Ford</h3>
+                <p class="team-member-position">Frontend Developer</p>
                 <ul class="list socials">
                   <li class="socials-item">
                     <a 
@@ -278,8 +294,8 @@
                 height="260"
               />
               <div class="team-member">
-                <h3 class="subtitle center-align">Camila Garcia</h3>
-                <p class="text center-align">Marketing</p>
+                <h3 class="team-member-subtitle">Camila Garcia</h3>
+                <p class="team-member-position">Marketing</p>
                 <ul class="list socials">
                   <li class="socials-item">
                     <a 
@@ -344,8 +360,8 @@
                 height="260"
               />
               <div class="team-member">
-                <h3 class="subtitle center-align">Daniel Wilson</h3>
-                <p class="text center-align">UI Designer</p>
+                <h3 class="team-member-subtitle">Daniel Wilson</h3>
+                <p class="team-member-position">UI Designer</p>
                 <ul class="list socials">
                   <li class="socials-item">
                     <a 
@@ -406,7 +422,7 @@
         </div>
       </section>
       <!-- Customers -->
-      <section class="section">
+      <!-- <section class="section">
         <div class="container">
           <h2 class="title">Customers</h2>
           <ul class="customers-companies-list">
@@ -484,10 +500,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!--footer-->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div  class="container footer-box">
         <div class="footer-msg-wrap">
           <a class="logo logo-footer link" href="./index.html">Web<span class="footer-logo">Studio</span></a>
@@ -570,12 +586,37 @@
           </div>          
         </form>      
       </div>          
-    </footer>
+    </footer> -->
 
-      <!-- modal window -->
-      
+<!-- mobile menu -->
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="menu-toggle js-close-menu">
+    <svg width="32" height="22"
+      fill="currentColor"
+      viewBox="0 0 20 20"
+    >      
+      <use href="./images/icons.svg#icon-menu-mobile"></use>
+      <path
+        fill-rule="evenodd"
+        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      ></path>
+    </svg>
+  </button>
+  <ul class="mobile-menu">
+    <li><a href="" class="link">About</a></li>
+    <li><a href="" class="link">Products</a></li>
+    <li><a href="" class="link">Contacts</a></li>
+    <li><a href="" class="link">Career</a></li>
+  </ul>
+</div>
 
-    <div class="backdrop is-hidden" data-modal>
+
+
+
+      <!-- modal window -->      
+
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-btn" type="button" data-modal-close>
           <svg class="modal-svg" width="8px" height="8px">
@@ -645,9 +686,16 @@
           <button type="submit" class="btn-hero btn-modal">Send</button>
         </form>
       </div>
-    </div>
+    </div> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
