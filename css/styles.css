@@ -672,7 +672,8 @@ button{
     flex-wrap: wrap;
     align-items: baseline;
     gap: 72px 24px;
-    margin-left: 108px;
+    padding-left: 92px ;
+    margin:auto ;
   }
 }
 /* desktop */
@@ -680,7 +681,8 @@ button{
   .footer-box {
     flex-wrap: nowrap;
     gap: 0;
-    justify-content: center;  
+    justify-content: center; 
+    padding-left: 15px; 
     margin:auto;
   }
 }
@@ -742,8 +744,7 @@ desktop */
   display: flex;
   flex-direction: column;
   gap: 16px;
-  /* 
-     */
+  
 }
 /* desktop */
 @media only screen and (min-width: 1158px) {
@@ -761,8 +762,7 @@ desktop */
 }
 
 .subscribe-input{
-  Width: 264px;
-  /* width: 264px; */
+  width: 398px;  
   height: 40px;
   padding: 8px 16px;
   font-size: 12px;
@@ -773,6 +773,18 @@ desktop */
   border: 1px solid #FFFFFF;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+}
+/* tablet */
+@media only screen and (min-width: 768px) {
+  .subscribe-input {
+    width: 398px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 1158px) {
+  .subscribe-input {
+    width: 264px; 
+  }
 }
 .subscribe-input::placeholder{
   color: #fff;
