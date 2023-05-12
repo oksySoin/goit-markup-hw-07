@@ -76,8 +76,6 @@ button{
   margin: 0 auto;
   padding-right: 16px;
   padding-left: 16px;
-
-  border: 2px solid red;  
 }
 /* tablet */
 @media only screen and (min-width: 768px) {
@@ -517,8 +515,7 @@ button{
 }
 /* tablet */
 @media only screen and (min-width: 768px) {
-  .cards-list {
-      
+  .cards-list {      
     flex-direction: row;
     flex-wrap: wrap;
     gap: 64px 24px;
@@ -543,8 +540,9 @@ button{
 /* tablet */
 @media only screen and (min-width: 768px) {
   .team-card {
-    flex-basis: calc((100% - 24px) / 2);
-
+    /* не працює */
+    /* flex-basis: calc((100% - 24px) / 2); */
+    width: 264px;    
   }
 }
 /* desktop */
@@ -599,16 +597,35 @@ button{
 .soc-link-footer:focus{
   background: var(--color-green);
 }
+
+
+/********************** CUSTOMERS *************************/
 .customers-companies-list{
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px 16px;
+  justify-content: space-between;
 }
+/* tablet */
+@media only screen and (min-width: 768px) {
+  .customers-companies-list {
+    gap: 72px 24px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 1158px) {
+  .customers-companies-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+}
+
 .customers-companies-link{
   display: flex;
   justify-content: center;
   align-items: center;  
-  width: 168px;
+  /* flex-basis: calc((100% - 16px) / 2); */
+  width: 190px;
   height: 88px;
 
   color: var(--color-light-slate);
@@ -617,6 +634,15 @@ button{
   transition: color var(--transition-dur-and-func),
     border-color var(--transition-dur-and-func);
 }
+/* tablet+desktop */
+@media only screen and (min-width: 768px) {
+  .customers-companies-link {
+    width: 168px;
+  }
+}
+
+
+
 .customers-companies-link:hover,
 .customers-companies-link:focus{
   border-color: var(--pressed-state-ocean);
