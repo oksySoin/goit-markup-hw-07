@@ -158,16 +158,28 @@ button{
 }
 
 .menu-toggle {
+  min-height: 22px;
+  min-width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  margin: 0;
   padding: 0;
   background-color: transparent;
   border: none;
-  height: 22px;
+  border-radius: 50%;
+  outline: none;
 }
 /* tablet+desktop */
 @media only screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
+}
+
+.menu-toggle:hover,
+.menu-toggle:focus {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .page-nav{
@@ -743,16 +755,21 @@ desktop */
 .subscribe-wrap{  
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  
+  align-items: center;
+  gap: 16px;  
+}
+/* tablet */
+@media only screen and (min-width: 768px) {
+  .subscribe-wrap {
+  flex-direction: row;
+  align-items: flex-end;
+  }
 }
 /* desktop */
 @media only screen and (min-width: 1158px) {
-  .subscribe-wrap {
-    flex-direction: row;
+  .subscribe-wrap {    
     margin-left: 80px;
-    gap: 24px;
-    align-items: flex-end;
+    gap: 24px;    
   }
 }
 
@@ -762,7 +779,7 @@ desktop */
 }
 
 .subscribe-input{
-  width: 398px;  
+  width: 288px;  
   height: 40px;
   padding: 8px 16px;
   font-size: 12px;
@@ -774,26 +791,26 @@ desktop */
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-/* tablet */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 428px) {
   .subscribe-input {
     width: 398px;
   }
 }
-/* desktop */
-@media only screen and (min-width: 1158px) {
+/* tablet+desktop */
+@media only screen and (min-width: 768px) {
   .subscribe-input {
-    width: 264px; 
+    width: 264px;
   }
 }
+
 .subscribe-input::placeholder{
   color: #fff;
 }
 
-
 .subscribe-btn{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   height: 40px;
   padding: 8px 24px;
@@ -815,8 +832,67 @@ desktop */
   fill: #fff;
 }
 
-/********************* MODAL*******************/
 
+
+/**************************** 
+                  MOBILE MENU 
+************************** */
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 32px;
+  background-color: #3f51b5;
+  z-index: 999;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-container .menu-toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #fff;
+}
+
+.mobile-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.mobile-menu .link {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-decoration: none;
+}
+.mobile-socials{
+  gap: 56px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/********************** 
+                  MODAL
+---*******************/
 .backdrop {
   position: fixed;
   z-index: 100;
