@@ -935,7 +935,6 @@ desktop */
 
 
 
-
 /********************** 
                   MODAL
 ---*******************/
@@ -966,7 +965,7 @@ desktop */
   left: 50%;
   transform: translate(-50%, -50%);
   width: var(--modal-width);
-  height: 584px;
+  height: auto;
   transform: translate(-50%, -50%) rotate(0) scale(1);
   padding: 24px;
   padding-top: 72px;  
