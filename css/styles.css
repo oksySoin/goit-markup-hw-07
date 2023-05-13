@@ -181,6 +181,9 @@ button{
 .menu-toggle:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
+.menu-toggle svg{
+  stroke: #2E2F42;
+}
 
 .page-nav{
   display: flex;
@@ -844,7 +847,7 @@ desktop */
   width: 100vw;
   height: 100vh;
   padding: 32px;
-  background-color: #3f51b5;
+  background-color: var(--main-bgc);
   z-index: 999;
 
   transform: translateX(100%);
@@ -859,21 +862,21 @@ desktop */
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #fff;
+  color: var(--main-color-navy-blue);
 }
 
 .mobile-menu {
   padding: 0;
   margin: 0;
-  list-style: none;
+}
+.mobile-menu-item{
+  display: block;
+  color: var(--main-color-navy-blue);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 }
 
-.mobile-menu .link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-}
 .mobile-socials{
   gap: 56px;
 }
