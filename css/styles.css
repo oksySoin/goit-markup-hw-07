@@ -93,8 +93,15 @@ button{
 }
 
 .section{
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;  
+}
+/* desktop */
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px; 
+  }
 }
 
 /************ LOGO ***********/
@@ -175,6 +182,9 @@ button{
   .menu-toggle {
     display: none;
   }
+}
+.menu-toggle.js-close-menu{
+  justify-content: center;
 }
 
 .menu-toggle:hover,
@@ -871,7 +881,14 @@ desktop */
   position: absolute;
   top: 24px;
   right: 24px;
-  color: var(--main-color-navy-blue);
+  min-height: 24px;
+  min-width: 24px;
+  background: var(--color-cornflower);
+  border: 1px solid var(--main-color-navy-blue);
+  opacity: 0.1;
+}
+.menu-container .menu-toggle svg{
+  fill: var(--main-color-navy-blue);
 }
 
 .mobile-menu {
