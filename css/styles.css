@@ -380,6 +380,7 @@ button{
 .btn-hero{
   display: flex;
   align-items: center;
+  justify-content: center;
   min-width: 169px;
   padding: 16px 32px;
   font-style: normal;
@@ -884,8 +885,7 @@ desktop */
   min-height: 24px;
   min-width: 24px;
   background: var(--color-cornflower);
-  border: 1px solid var(--main-color-navy-blue);
-  opacity: 0.1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 .menu-container .menu-toggle svg{
   fill: var(--main-color-navy-blue);
