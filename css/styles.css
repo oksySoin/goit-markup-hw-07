@@ -887,9 +887,6 @@ desktop */
   background: var(--color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.menu-container .menu-toggle svg{
-  fill: var(--main-color-navy-blue);
-}
 
 .mobile-menu {
   margin-bottom: auto;
