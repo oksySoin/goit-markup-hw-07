@@ -335,17 +335,17 @@ button{
     rgba(46, 47, 66, 0.7)),
     url(../images/header/header-main.jpg);
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: var(--main-color-navy-blue);   
 /*   
   max-width: 1440px;
-  background-size: cover;*/  
+  */  
 }
 /* tablet */
 @media only screen and (min-width: 768px) {
   .hero {
     margin-top: 72px;
-    padding-top: 40px;
   }
 }
 /* desktop */
@@ -866,6 +866,7 @@ desktop */
   width: 100vw;
   height: 100vh;
   padding: 32px;
+  overflow: auto;
   background-color: var(--main-bgc);
   z-index: 999;
   transform: translateX(100%);
@@ -905,6 +906,15 @@ desktop */
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
+}
+
+.current.mobile-menu-item{
+  color: var(--pressed-state-ocean);
+}
+
+.mobile-menu-item:hover,
+.mobile-menu-item:focus{
+  color: var(--pressed-state-ocean);
 }
 
 .mobile-menu-contacts-tel a{
