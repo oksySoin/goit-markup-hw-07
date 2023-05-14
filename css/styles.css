@@ -333,25 +333,58 @@ button{
   padding: 112px 0;
   background-image: linear-gradient(rgba(46, 47, 66, 0.7),
     rgba(46, 47, 66, 0.7)),
-    url(../images/header/header-main.jpg);
+    url(../images/hero/mob@1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: var(--main-color-navy-blue);   
-/*   
-  max-width: 1440px;
-  */  
+  background-color: var(--main-color-navy-blue);
+}
+/* retina */
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
+      url(../images/hero/mob@2x.jpg);
+  }
+}
+/* mobile */
+@media only screen and (min-width: 428px) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
+      url(../images/hero/tab@1x.jpg);
+  }
+  /* retina */
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero{
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/tab@2x.jpg);
+    }
+  }
 }
 /* tablet */
 @media only screen and (min-width: 768px) {
   .hero {
     margin-top: 72px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)),
+      url(../images/hero/desktp@1x.jpg);
+  }
+  /* retina */
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero{
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+        url(../images/hero/desktp@2x.jpg);
+    }
   }
 }
 /* desktop */
 @media only screen and (min-width: 1158px) {
   .hero {
     padding: 188px 0;
+      /* max-width: 1440px; */
   }
 }
 
