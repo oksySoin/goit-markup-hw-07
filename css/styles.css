@@ -973,13 +973,11 @@ desktop */
 
 .mobile-socials{
   justify-content: flex-start;
-  margin-bottom: auto;
 }
 /**/
 @media only screen and (min-width: 428px) {
   .mobile-socials {    
     gap: 56px;
-    margin-bottom: 0;
   }
 }
 
